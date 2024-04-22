@@ -6,3 +6,7 @@ stumpy
 scipy
 ast
 matrixprofile
+sklearn
+sktime
+tslearn
+tensorflow
