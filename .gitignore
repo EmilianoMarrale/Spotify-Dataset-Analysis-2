@@ -1,4 +1,8 @@
 personale.ipynb
 dataset/tabular/time_series.csv
 dataset
+cleaned_time_series
+time_series
 top_similar_motifs.csv
+.ipynb_checkpoints
+.DS_Store
