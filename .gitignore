@@ -6,3 +6,4 @@ time_series
 top_similar_motifs.csv
 .ipynb_checkpoints
 .DS_Store
+*.png
