@@ -7,3 +7,6 @@ top_similar_motifs.csv
 .ipynb_checkpoints
 .DS_Store
 *.png
+RandomForest.ipynb
+XAI - Copia.ipynb
+best_model_NOREG.keras
