@@ -275,6 +275,17 @@ def get_counterfactual_rules(x, y, dt, Z, Y, feature_names, class_name, class_va
         if bb_predict is not None:
             xc = apply_counterfactual(x, delta, feature_names, features_map, features_map_inv, numeric_columns)
             bb_outcomec = bb_predict(xc.reshape(1, -1))[0]
+
+            if isinstance(bb_outcomec, list):
+                bb_outcomec = bb_outcomec[0]
+
+
+            if not isinstance(bb_outcomec, int):
+                try:
+                    bb_outcomec = int(bb_outcomec)
+                except:
+                    raise TypeError('The black-box model must return integer values')
+
             bb_outcomec = class_values[bb_outcomec] if isinstance(class_name, str) else multilabel2str(bb_outcomec,
                                                                                                        class_values)
             dt_outcomec = crule.cons
